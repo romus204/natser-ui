@@ -1,0 +1,81 @@
+.headers-editor {
+  width: 100%;
+}
+
+.headers-editor label {
+  display: block;
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.header-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+  min-width: 0;
+}
+
+.header-row input {
+  padding: 8px 10px;
+  background: #0f0f1a;
+  border: 1px solid #2d2d44;
+  border-radius: 6px;
+  color: #e2e8f0;
+  font-family: inherit;
+  font-size: 13px;
+  min-width: 0;
+}
+
+.header-key {
+  flex: 1;
+  min-width: 0;
+}
+
+.header-value {
+  flex: 1;
+  min-width: 0;
+}
+
+.btn-remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  min-width: 36px;
+  max-width: 36px;
+  height: 36px;
+  background: #1a1a2e;
+  border: 1px solid #2d2d44;
+  border-radius: 6px;
+  color: #ef4444;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.btn-remove:hover {
+  background: #2d2d44;
+}
+
+@media (max-width: 480px) {
+  .header-row {
+    flex-wrap: wrap;
+  }
+
+  .header-key {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .header-value {
+    flex: 0 0 calc(100% - 44px);
+    max-width: calc(100% - 44px);
+  }
+
+  .btn-remove {
+    flex: 0 0 36px;
+    max-width: 36px;
+  }
+}

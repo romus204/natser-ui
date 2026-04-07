@@ -1,0 +1,81 @@
+.app { max-width: 90%; margin: 0 auto; padding: 20px; }
+
+.content { }
+
+/* Две колонки (NATS Core) */
+.panel-2-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+/* JetStream layout: слева publish+info, справа subscribe */
+.panel-jetstream {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.panel-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.panel-col:last-child .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #1a1a2e;
+  border: 1px solid #2d2d44;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: #e2e8f0;
+}
+
+.row { display: flex; gap: 12px; align-items: flex-end; }
+.row .field { flex: 1; margin-bottom: 0; }
+
+.info-output {
+  background: #0f0f1a;
+  border: 1px solid #2d2d44;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 13px;
+  overflow-x: auto;
+  margin-top: 12px;
+}
+
+.send {
+  width: fit-content;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .panel-2-col,
+  .panel-jetstream {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-col {
+    gap: 20px;
+  }
+
+  .row { flex-direction: column; }
+}

@@ -1,0 +1,26 @@
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #1a1a2e;
+  border: 1px solid #2d2d44;
+  border-radius: 8px;
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.active {
+  background: #6366f1;
+  border-color: #6366f1;
+  color: white;
+}
+
+.button:hover:not(.active) { border-color: #6366f1; }
